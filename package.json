@@ -1,0 +1,40 @@
+{
+  "name": "wechat-article-reader",
+  "version": "1.0.0",
+  "description": "读取微信公众号文章全文的 OpenClaw Skill",
+  "author": "小爪 (Claw) 🦎",
+  "license": "MIT",
+  "homepage": "https://github.com/yhai3596/wechat-article-reader",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yhai3596/wechat-article-reader.git"
+  },
+  "keywords": [
+    "openclaw",
+    "skill",
+    "wechat",
+    "微信公众号",
+    "article",
+    "reader",
+    "crawler"
+  ],
+  "openclaw": {
+    "skill": true,
+    "emoji": "📰",
+    "category": "content",
+    "requires": {
+      "bins": ["curl", "python3"],
+      "python_packages": ["playwright"]
+    }
+  },
+  "scripts": {
+    "install": "pip install playwright && playwright install chromium",
+    "test": "python3 tool.py \"https://mp.weixin.qq.com/s/4gmDz_VsBZ1qIaEINQGxcw\""
+  },
+  "files": [
+    "SKILL.md",
+    "README.md",
+    "wechat_reader.py",
+    "tool.py"
+  ]
+}
